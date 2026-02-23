@@ -37,7 +37,6 @@ header h1 {
     margin: 0;
     color: #1b5e20;
     font-weight: 700;
-    letter-spacing: 1px;
 }
 
 nav a {
@@ -71,11 +70,6 @@ nav a:hover {
 
 .hero h2 {
     font-size: 52px;
-    margin-bottom: 20px;
-}
-
-.hero p {
-    font-size: 18px;
 }
 
 section {
@@ -91,6 +85,27 @@ section h2 {
     color: #1b5e20;
 }
 
+/* ABOUT SECTION */
+#about {
+    background: white;
+    text-align: center;
+}
+
+#about p {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.9;
+    margin-bottom: 25px;
+    font-size: 17px;
+}
+
+.about-highlight {
+    font-weight: 600;
+    font-size: 20px;
+    color: #1b5e20;
+}
+
+/* PRODUCTS */
 .products {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -102,7 +117,7 @@ section h2 {
     border-radius: 18px;
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0,0,0,0.07);
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .card:hover {
@@ -137,7 +152,6 @@ section h2 {
 .wholesale {
     background: #eef6ec;
     text-align: center;
-    padding: 90px 20px;
 }
 
 .btn {
@@ -176,6 +190,7 @@ footer {
 <header>
 <h1>Radha Vann</h1>
 <nav>
+<a href="#about">About</a>
 <a href="#products">Produce</a>
 <a href="#wholesale">Wholesale</a>
 <a href="#contact">Contact</a>
@@ -189,6 +204,27 @@ footer {
 </div>
 </div>
 
+<!-- ABOUT SECTION -->
+<section id="about">
+<h2>About Radha Vann</h2>
+
+<p>
+One simple question stayed with us: If we are so careful about what we feed our own child, why shouldn’t the same care go into the food we grow for others? That thought became Radha Vann.
+</p>
+
+<p>
+We grow our food ourselves so there is no guessing, no shortcuts, and no compromises. We know the soil, the water, and how each crop is nurtured because we are involved at every step. Everything is grown with patience and responsibility, just the way we would grow food for our own family.
+</p>
+
+<p>
+For us, farming is not a business first; it is a responsibility. The produce that leaves Radha Vann is the same food we bring into our own kitchen. If it’s not good enough for our child, it doesn’t go out.
+</p>
+
+<p class="about-highlight">
+Radha Vann is our way of sharing that care and honesty with you — simple, clean food grown with love, the way it should be.
+</p>
+</section>
+
 <section id="products">
 <h2>Our Produce</h2>
 
@@ -196,89 +232,21 @@ footer {
 <div class="products">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1625944238615-2c9f5f9c3e5c?w=800&q=80&auto=format&fit=crop" alt="Indian Toor Dal">
+<img src="https://images.unsplash.com/photo-1625944238615-2c9f5f9c3e5c?w=800&q=80&auto=format&fit=crop">
 <h3>Toor Dal (Tur Dal)</h3>
 <p>Premium Indian pigeon pea, naturally grown and carefully sun-dried.</p>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1604908176766-73db64b13e8e?w=800&q=80&auto=format&fit=crop" alt="Whole Wheat">
+<img src="https://images.unsplash.com/photo-1604908176766-73db64b13e8e?w=800&q=80&auto=format&fit=crop">
 <h3>Whole Wheat</h3>
 <p>Nutrient-rich whole wheat cultivated responsibly on our farms.</p>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1615485925600-97237c4fc1ec?q=80&w=800&auto=format&fit=crop" alt="Whole Brown Chana">
-<h3>Whole Brown Chana</h3>
-<p>Protein-rich whole brown chickpeas grown with natural farming methods.</p>
+<img src="https://images.unsplash.com/photo-1606925797300-0f1e0a6a2b59?w=800&q=80&auto=format&fit=crop">
+<h3>Whole Bengal Gram</h3>
+<p>Premium quality whole bengal gram (chana) grown naturally.</p>
 </div>
 
 </div>
-
-<br><br>
-
-<div class="category-title">Vegetables</div>
-<div class="products">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1615485925400-7e3c5f4f1f6d?w=800&q=80&auto=format&fit=crop" alt="Fresh Cabbage">
-<h3>Cabbage</h3>
-<p>Fresh, crisp cabbage harvested directly from our fields.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=800&q=80&auto=format&fit=crop" alt="Brinjal">
-<h3>Brinjal</h3>
-<p>Fresh purple brinjals grown naturally in rich farm soil.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb?w=800&q=80&auto=format&fit=crop" alt="Palak">
-<h3>Palak (Spinach)</h3>
-<p>Leafy, nutrient-dense spinach grown responsibly.</p>
-</div>
-
-</div>
-
-<br><br>
-
-<div class="category-title">Special Produce</div>
-<div class="products">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=800&q=80&auto=format&fit=crop" alt="Pure Honey">
-<h3>Pure Honey</h3>
-<p>Raw, unprocessed natural honey collected with care.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1572441710534-68067b38b3f2?w=800&q=80&auto=format&fit=crop" alt="Fresh Fish">
-<h3>Fresh Fish</h3>
-<p>Responsibly farm-raised fish delivered fresh.</p>
-</div>
-
-</div>
-
-</section>
-
-<section id="wholesale" class="wholesale">
-<h2>Wholesale Partnerships</h2>
-<p>We supply bulk quantities to hotels, retailers and distributors.</p>
-<a href="mailto:radhavann@gmail.com" class="btn">Enquire Now</a>
-</section>
-
-<section id="contact">
-<h2>Contact Us</h2>
-<p>Email: radhavann@gmail.com</p>
-<p>Phone: +91 7299629196</p>
-</section>
-
-<footer>
-© 2026 Radha Vann | Premium Farm Produce
-</footer>
-
-<a href="https://wa.me/917299629196" class="whatsapp" target="_blank">W</a>
-
-</body>
-</html>
-
