@@ -3,75 +3,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radha Vann's Official</title>
+<title>Radha Vann | From Our Soil To Your Soul</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f9f4;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fafcf8;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
 }
 
 header {
-    background-color: #2e7d32;
-    color: white;
-    padding: 30px;
-    text-align: center;
+    background: white;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    z-index: 1000;
 }
 
 header h1 {
     margin: 0;
-    font-size: 36px;
+    color: #1b5e20;
 }
 
-header p {
-    margin-top: 10px;
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 25px;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #2e7d32;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-content {
+    background: rgba(0,0,0,0.55);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 700px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.hero p {
     font-size: 18px;
+    font-weight: 300;
 }
 
 section {
-    padding: 50px 20px;
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+    color: #1b5e20;
+}
+
+.about p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-h2 {
-    color: #2e7d32;
-    margin-bottom: 20px;
-}
-
 .products {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
 }
 
 .card {
     background: white;
-    padding: 20px;
-    width: 220px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
 }
 
 .card h3 {
-    color: #1b5e20;
+    padding: 15px;
+    margin: 0;
+    color: #2e7d32;
 }
 
-button {
-    background-color: #2e7d32;
+.card p {
+    padding: 0 15px 20px;
+    font-size: 14px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2e7d32;
     color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 14px 30px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: #1b5e20;
+}
+
+.wholesale {
+    background: #f2f7f2;
+    padding: 80px 20px;
+    text-align: center;
 }
 
 footer {
-    background-color: #1b5e20;
+    background: #1b5e20;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
+}
+
+.whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    color: white;
+    padding: 18px 20px;
+    border-radius: 50%;
+    font-size: 20px;
+    text-decoration: none;
 }
 </style>
 </head>
@@ -79,84 +177,78 @@ footer {
 <body>
 
 <header>
-<h1>Radha Vann's Official</h1>
-<p>From Our Soil To Your Soul 🌾</p>
-
-<nav style="margin-top:15px;">
-<a href="#about" style="color:white; margin:0 15px;">About</a>
-<a href="#products" style="color:white; margin:0 15px;">Products</a>
-<a href="#wholesale" style="color:white; margin:0 15px;">Wholesale</a>
-<a href="#contact" style="color:white; margin:0 15px;">Contact</a>
+<h1>Radha Vann</h1>
+<nav>
+<a href="#about">About</a>
+<a href="#products">Produce</a>
+<a href="#wholesale">Wholesale</a>
+<a href="#contact">Contact</a>
 </nav>
 </header>
 
-<section id="about">
-<h2>About Us</h2>
-<p>
+<div class="hero">
+<div class="hero-content">
+<h2>From Our Soil To Your Soul 🌾</h2>
+<p>Pure, responsible farming inspired by family, nurtured with care.</p>
+</div>
+</div>
 
-
-Radha Vann started from a very personal place. Like every parent, we think deeply about what goes into our child’s body. What they eat matters because food is not just about taste; it’s about health, growth, and care.
-
-One simple question stayed with us: If we are so careful about what we feed our own child, why shouldn’t the same care go into the food we grow for others?
-That thought became Radha Vann.
-
-We grow our food ourselves, so there is no guessing, no shortcuts, and no compromises. We know the soil, the water, and the way each crop is nurtured, because we are involved at every step. Everything is grown with patience and responsibility, just the way we would grow food for our own family.
-
-For us, farming is not a business first; it is a responsibility. The produce that leaves Radha Vann is the same food we bring into our own kitchen. If it’s not good enough for our child, it doesn’t go out.
-
-Radha Vann is our way of sharing that care and honesty with you simple, clean food grown with love, the way it should be.
-</p>
+<section id="about" class="about">
+<h2>Our Story</h2>
+<p>Radha Vann started from a very personal place. Like every parent, we think deeply about what goes into our child’s body. Food is not just about taste — it is about health, growth, and care.</p>
+<p>One simple question stayed with us: <strong>If we are so careful about what we feed our own child, why shouldn’t the same care go into the food we grow for others?</strong></p>
+<p>That thought became Radha Vann. We grow our food ourselves — with no shortcuts, no compromises, and complete responsibility.</p>
+<p>If it’s not good enough for our child, it doesn’t go out. That is our promise.</p>
 </section>
 
 <section id="products">
-<h2>Our Products</h2>
-
+<h2>Our Produce</h2>
 <div class="products">
 
 <div class="card">
-<h3>Fresh Fruits</h3>
-<p>Seasonal, farm-fresh and chemical-free fruits.</p>
+<img src="https://images.unsplash.com/photo-1546470427-e5ac89bcb9b7">
+<h3>Fresh Tomatoes</h3>
+<p>Juicy, naturally grown farm tomatoes.</p>
 </div>
 
 <div class="card">
-<h3>Grains</h3>
-<p>High-quality, naturally grown grains.</p>
-</div>
-
-<div class="card">
+<img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924">
 <h3>Pure Honey</h3>
-<p>100% raw, unprocessed natural honey.</p>
+<p>Raw, unprocessed and ethically harvested honey.</p>
 </div>
 
 <div class="card">
+<img src="https://images.unsplash.com/photo-1615485737651-13f06d8f2d64">
+<h3>Green Peas</h3>
+<p>Seasonal vegetables grown with patience and care.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1572441710534-68067b38b3f2">
 <h3>Fresh Fish</h3>
-<p>Farm-raised, hygienically handled fresh fish.</p>
+<p>Farm-raised, responsibly handled fresh fish.</p>
 </div>
 
 </div>
+</section>
+
+<section id="wholesale" class="wholesale">
+<h2>Wholesale Partnerships</h2>
+<p>We supply bulk quantities to hotels, retailers, and distributors. Let’s grow together.</p>
+<a href="mailto:radhavann@gmail.com" class="btn">Enquire Now</a>
 </section>
 
 <section id="contact">
-<a href="https://wa.me/91XXXXXXXXXX" target="_blank">
-<button style="margin-top:15px;">Order on WhatsApp</button>
-</a>
-    <section id="wholesale">
-<h2>Wholesale Enquiry</h2>
-<p>If you are a retailer, hotel, or distributor, contact us for bulk pricing and partnerships.</p>
+<h2>Contact Us</h2>
 <p>Email: radhavann@gmail.com</p>
+<p>Phone: +91 7299629196</p>
 </section>
 
 <footer>
-<p>© 2026 Radha Vann's Official | All Rights Reserved</p>
+© 2026 Radha Vann | Premium Farm Produce
 </footer>
 
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp" target="_blank">W</a>
+
 </body>
-
 </html>
-
-
-
-
-
-
-
