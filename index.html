@@ -1,201 +1,285 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Radha Vann | Fresh Farm Produce</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radha Vann | Pure Farm Produce & Honey</title>
 
 <style>
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#f5f5f5;
-color:#333;
-line-height:1.6;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f8f4;
+  color: #333;
+  scroll-behavior: smooth;
 }
 
-header{
-background:white;
-padding:20px;
-text-align:center;
-font-size:28px;
-font-weight:bold;
-color:#1b5e20;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+section {
+  padding: 80px 20px;
 }
 
-.hero{
-background:url('images/farm-banner.jpg') center/cover no-repeat;
-height:80vh;
-display:flex;
-align-items:center;
-justify-content:center;
-color:white;
-text-align:center;
+.container {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
 }
 
-.hero div{
-background:rgba(0,0,0,0.6);
-padding:30px;
-border-radius:10px;
-max-width:600px;
+h1, h2 {
+  color: #2e4d2e;
 }
 
-section{
-padding:60px 20px;
-text-align:center;
+p {
+  line-height: 1.8;
+  font-size: 18px;
 }
 
-h2{
-color:#1b5e20;
-margin-bottom:20px;
+/* HERO */
+.hero {
+  background: linear-gradient(to right, #2e4d2e, #4f7c4f);
+  color: white;
+  padding: 100px 20px;
 }
 
-.about{
-max-width:900px;
-margin:auto;
-text-align:left;
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+.hero p {
+  font-size: 20px;
+  opacity: 0.9;
 }
 
-.card{
-background:white;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-overflow:hidden;
+/* ABOUT */
+.about {
+  background: #ffffff;
 }
 
-.card img{
-width:100%;
-height:200px;
-object-fit:cover;
+.honey-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
 }
 
-.card h3{
-padding:10px;
+.honey-list li {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #8b5e00;
+  font-weight: 600;
 }
 
-.water img{
-width:300px;
-border-radius:10px;
-margin-top:20px;
+/* PRODUCTS */
+.products {
+  background: #f1efe9;
 }
 
-.whatsapp{
-display:inline-block;
-margin-top:20px;
-padding:12px 25px;
-background:#25D366;
-color:white;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
 }
 
-footer{
-background:#1b5e20;
-color:white;
-padding:15px;
-margin-top:40px;
-text-align:center;
+.product-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+}
+
+.product-card h3 {
+  margin-bottom: 10px;
+  color: #2e4d2e;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #8b5e00;
+  margin: 15px 0;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background: #2e4d2e;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1f351f;
+}
+
+/* WHOLESALE FORM */
+.wholesale {
+  background: white;
+}
+
+form {
+  max-width: 600px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+footer {
+  background: #2e4d2e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* SIMPLE FADE ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 </style>
-
 </head>
+
 <body>
 
-<header>Radha Vann</header>
-
-<div class="hero">
-<div>
-<h1>From Our Soil To Your Soul 🌾</h1>
-<p>Pure farming. Fresh produce. Natural care.</p>
-</div>
-</div>
-
-<section>
-<h2>About Us</h2>
-<div class="about">
-
-<p><strong>Radha Vann started from a very personal place.</strong> Like every parent, we think deeply about what goes into our child’s body. What they eat matters because food is not just about taste but also about health, growth, and care.</p>
-
-<p>One simple question stayed with us: <strong>If we are so careful about what we feed our own child, why shouldn’t the same care go into the food we grow for others?</strong> That thought became Radha Vann.</p>
-
-<p>We grow our food ourselves so there is no guessing, no shortcuts, and no compromises. We know the soil, the water, and how each crop is nurtured because we are involved at every step. Everything is grown with patience and responsibility, just the way we would grow food for our own family.</p>
-
-<p>For us, farming is not a business first; it is a responsibility. The produce that leaves Radha Vann is the same food we bring into our own kitchen. If it’s not good enough for our child, it doesn’t go out.</p>
-
-<p><strong>Radha Vann is our way of sharing that care and honesty with you — simple, clean food grown with love, the way it should be.</strong></p>
-
-</div>
+<!-- HERO -->
+<section class="hero">
+  <div class="container fade-in">
+    <h1>Radha Vann</h1>
+    <p>Simple. Clean. Honest food grown with love.</p>
+  </div>
 </section>
 
-<section>
-<h2>Our Produce</h2>
+<!-- ABOUT -->
+<section class="about">
+  <div class="container fade-in">
+    <h2>About Us</h2>
 
-<div class="grid">
+    <p>
+      Radha Vann started from a very personal place. Like every parent, we think deeply about what goes into our child’s body.
+      Food is not just about taste — it is about health, growth, and care.
+    </p>
 
-<div class="card">
-<img src="images/cabbage.jpg">
-<h3>Cabbage</h3>
-</div>
+    <p>
+      One simple question stayed with us:
+      <strong>If we are so careful about what we feed our own child, why shouldn’t the same care go into the food we grow for others?</strong>
+      That thought became Radha Vann.
+    </p>
 
-<div class="card">
-<img src="images/mirchi.jpg">
-<h3>Mirchi</h3>
-</div>
+    <p>
+      We grow our food ourselves with no shortcuts and no compromises. Everything is nurtured with patience and responsibility.
+    </p>
 
-<div class="card">
-<img src="images/pumpkin.jpg">
-<h3>Pumpkin</h3>
-</div>
+    <p><strong>Our Special Honey Varieties:</strong></p>
 
-<div class="card">
-<img src="images/corn-field.jpg">
-<h3>Corn</h3>
-</div>
+    <ul class="honey-list">
+      <li>🍯 Jamun Honey</li>
+      <li>🍯 Bore Honey</li>
+      <li>🍯 Neem Honey</li>
+    </ul>
 
-<div class="card">
-<img src="images/soybean.jpg">
-<h3>Soybean</h3>
-</div>
+    <p>
+      Each variety carries its own natural flavor and health benefits — harvested carefully and handled with honesty.
+    </p>
 
-<div class="card">
-<img src="images/chikoo.jpg">
-<h3>Chikoo</h3>
-</div>
-
-<div class="card">
-<img src="images/chinch.jpg">
-<h3>Chinch</h3>
-</div>
-
-</div>
+    <p>
+      If it’s not good enough for our child, it doesn’t go out.
+    </p>
+  </div>
 </section>
 
-<section class="water">
-<h2>Our Water Source</h2>
-<img src="images/bore.jpg">
-<p>All crops are irrigated using clean borewell water from our own land.</p>
+<!-- PRODUCTS -->
+<section class="products">
+  <div class="container fade-in">
+    <h2>Our Honey Collection</h2>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+        <h3>Jamun Honey</h3>
+        <p>Rich, dark honey known for its unique taste and health benefits.</p>
+        <div class="price">₹850 / 500g</div>
+        <button>Enquire Now</button>
+      </div>
+
+      <div class="product-card">
+        <h3>Bore Honey</h3>
+        <p>Light golden honey with a smooth, natural sweetness.</p>
+        <div class="price">₹750 / 500g</div>
+        <button>Enquire Now</button>
+      </div>
+
+      <div class="product-card">
+        <h3>Neem Honey</h3>
+        <p>Strong, medicinal honey valued for immunity support.</p>
+        <div class="price">₹900 / 500g</div>
+        <button>Enquire Now</button>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section>
-<h2>Contact Us</h2>
-<p>For wholesale or fresh supply contact us directly.</p>
+<!-- WHOLESALE -->
+<section class="wholesale">
+  <div class="container fade-in">
+    <h2>Wholesale Enquiry</h2>
+    <p>Interested in bulk orders? Fill the form below and we will connect with you.</p>
 
-<a href="https://wa.me/919876543210" class="whatsapp">
-Chat on WhatsApp
-</a>
-
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <input type="text" placeholder="Business Name">
+      <textarea placeholder="Quantity Requirement & Details"></textarea>
+      <button type="submit">Submit Enquiry</button>
+    </form>
+  </div>
 </section>
 
 <footer>
-© 2026 Radha Vann. All rights reserved.
+  © 2026 Radha Vann. Grown with care. Shared with love.
 </footer>
+
+<script>
+const faders = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+    }
+  });
+});
+
+faders.forEach(fade => {
+  observer.observe(fade);
+});
+</script>
 
 </body>
 </html>
