@@ -24,6 +24,7 @@
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg-cream);
     color: var(--text-dark);
+    line-height: 1.8;
   }
 
   h1, h2, h3 { font-family: 'Playfair Display', serif; }
@@ -31,119 +32,82 @@
   /* --- Navigation Bar --- */
   nav {
     position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(47, 79, 47, 0.95);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    top: 0; width: 100%; padding: 20px 50px;
+    display: flex; justify-content: space-between; align-items: center;
+    background: rgba(47, 79, 47, 0.95); backdrop-filter: blur(10px);
+    z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   }
 
-  .logo {
-    color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 24px;
-    font-weight: 700;
-    text-decoration: none;
-  }
-
+  .logo { color: white; font-size: 24px; font-weight: 700; text-decoration: none; font-family: 'Playfair Display', serif; }
   .nav-links { list-style: none; display: flex; margin: 0; }
   .nav-links li { margin-left: 30px; }
-  .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    letter-spacing: 1px;
-    transition: 0.3s;
-  }
+  .nav-links a { color: white; text-decoration: none; font-size: 14px; letter-spacing: 1px; transition: 0.3s; }
   .nav-links a:hover { color: var(--accent-gold); }
 
   /* --- Header --- */
   header {
     background: url('images/Farm Banner.jpg') center/cover no-repeat;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
+    height: 100vh; display: flex; align-items: center; justify-content: center;
+    text-align: center; color: white; position: relative;
   }
-
-  header::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.4);
-  }
-
+  header::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.4); }
   .header-content { position: relative; z-index: 2; padding: 0 20px; }
   header h1 { font-size: clamp(40px, 8vw, 80px); margin: 0; }
   header p { font-size: clamp(16px, 3vw, 24px); margin-top: 15px; font-weight: 300; }
 
-  /* --- Sections --- */
-  section { padding: 100px 20px; max-width: 1200px; margin: auto; }
-  .section-title { text-align: center; font-size: 36px; margin-bottom: 50px; color: var(--primary-green); }
-  
   /* --- About Section --- */
-  .about { text-align: center; max-width: 800px; }
-  .about p { font-size: 18px; line-height: 1.9; margin-bottom: 25px; }
-  .about-highlight { font-style: italic; font-size: 22px; color: var(--primary-green); font-weight: 500; }
+  section { padding: 100px 20px; max-width: 1200px; margin: auto; }
+  .section-title { text-align: center; font-size: 38px; margin-bottom: 50px; color: var(--primary-green); }
+  
+  .about-content { max-width: 850px; margin: 0 auto; text-align: center; }
+  .about-content p { font-size: 18px; margin-bottom: 25px; color: #444; }
+  
+  .about-quote {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    border-left: 6px solid var(--primary-green);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--primary-green);
+    font-weight: 500;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    line-height: 1.5;
+  }
 
-  /* --- Grid --- */
+  /* --- Produce Grid --- */
   .produce-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
+    gap: 35px;
   }
-
-  .card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-
+  .card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.05); transition: 0.4s; }
   .card:hover { transform: translateY(-12px); }
-  .card img { width: 100%; height: 250px; object-fit: cover; }
+  .card img { width: 100%; height: 260px; object-fit: cover; }
   .card-content { padding: 25px; }
   .card h3 { margin: 0 0 10px 0; color: var(--primary-green); }
 
   /* --- Contact --- */
-  .contact { background: var(--primary-green); color: white; text-align: center; border-radius: 20px; margin-bottom: 80px; }
-  .contact a { color: var(--accent-gold); text-decoration: none; }
+  .contact { background: var(--primary-green); color: white; text-align: center; border-radius: 20px; margin-top: 50px; }
+  .contact a { color: var(--accent-gold); text-decoration: none; font-weight: 500; }
 
-  /* --- Sticky WhatsApp --- */
+  /* --- Floating Elements --- */
   .whatsapp-float {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--whatsapp-green);
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-    z-index: 100;
-    transition: 0.3s;
+    position: fixed; bottom: 30px; right: 30px;
+    background-color: var(--whatsapp-green); color: white;
+    width: 60px; height: 60px; border-radius: 50px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px; box-shadow: 2px 5px 15px rgba(0,0,0,0.2);
+    z-index: 100; transition: 0.3s;
   }
-  .whatsapp-float:hover { transform: scale(1.1); background-color: #128C7E; }
+  .whatsapp-float:hover { transform: scale(1.1); }
 
   footer { text-align: center; padding: 40px; background: #1f331f; color: white; font-size: 14px; }
 
-  /* --- Mobile Adjustments --- */
   @media (max-width: 768px) {
     nav { padding: 15px 20px; }
-    .nav-links { display: none; } /* Hide links on mobile for simplicity */
+    .nav-links { display: none; }
   }
 </style>
 </head>
@@ -166,30 +130,30 @@
   </div>
 </header>
 
-<section id="about" class="about">
+<section id="about">
   <h2 class="section-title">Rooted in Integrity</h2>
-  <p>
-  
+  <div class="about-content">
+    <p>
+      Radha Vann started from a very personal place. Like every parent, we think deeply about what goes into our child’s body, what they eat matters because food is not just about taste but also about health, growth, and care.
+    </p>
 
-Radha Vann started from a very personal place. Like every parent, we think deeply about what goes into our child’s body, what they eat matters because food is not just about taste but also about health, growth, and care.
+    <p>
+      One simple question stayed with us: If we are so careful about what we feed our own child, why shouldn’t the same care go into the food we grow for others? 
+      <strong>That thought became Radha Vann.</strong>
+    </p>
 
-One simple question stayed with us: If we are so careful about what we feed our own child, why shouldn’t the same care go into the food we grow for others?
-That thought became Radha Vann.
+    <p>
+      We grow our food ourselves, so there is no guessing, no shortcuts, and no compromises. We know the soil, the water, and how each crop is nurtured because we are involved at every step. Everything is grown with patience and responsibility, just the way we would grow food for our own family.
+    </p>
 
-We grow our food ourselves, so there is no guessing, no shortcuts, and no compromises. We know the soil, the water, and how each crop is nurtured because we are involved at every step. Everything is grown with patience and responsibility, just the way we would grow food for our own family.
+    <div class="about-quote">
+      "For us, farming is not a business first; it is a responsibility. The produce that leaves Radha Vann is the same food we bring into our own kitchen. If it’s not good enough for our child, it doesn’t go out."
+    </div>
 
-
-
-
-
-  </p>
-  <p class="about-highlight">
-    "For us, farming is not a business first; it is a responsibility. The produce that leaves Radha Vann is the same food we bring into our own kitchen. If it’s not good enough for our child, it doesn’t go out.
-"
-  </p>
-  <p>
-    Radha Vann is our way of sharing that care and honesty with you, simple, clean food grown with love, the way it should be.
-  </p>
+    <p>
+      Radha Vann is our way of sharing that care and honesty with you—simple, clean food grown with love, the way it should be.
+    </p>
+  </div>
 </section>
 
 <section id="produce">
@@ -238,4 +202,3 @@ We grow our food ourselves, so there is no guessing, no shortcuts, and no compro
 
 </body>
 </html>
-
