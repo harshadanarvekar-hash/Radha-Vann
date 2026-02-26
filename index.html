@@ -4,61 +4,228 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radha Vann | Premium Farm Lifestyle</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f1e8;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
+header {
+  background: url('images/Farm Banner.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+header h1 {
+  font-size: 60px;
+  letter-spacing: 3px;
+}
+
+header p {
+  font-size: 22px;
+  margin-top: 15px;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #2f4f2f;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.produce-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #3e5c3e;
+}
+
+.contact {
+  background: #2f4f2f;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.contact a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #25D366;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #1f331f;
+  color: white;
+  font-size: 14px;
+}
+</style>
 </head>
 
 <body>
 
-<header class="navbar">
-    <div class="logo">
-        <img src="images/logo.png" alt="Radha Vann Logo">
-        <span>Radha Vann</span>
-    </div>
-
-    <nav>
-        <a href="#about">About</a>
-       <a href="products.html">Products</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<header>
+  <div class="header-content">
+    <h1>Radha Vann</h1>
+    <p>Premium Farm Lifestyle • Rooted in Indian Values</p>
+  </div>
 </header>
 
-<section class="hero">
-    <div class="hero-text">
-        <h1>Rooted in Tradition. Grown with Purity.</h1>
-        <p>Premium Farm Lifestyle Brand Inspired by Indian Values</p>
-        <a href="products.html" class="btn">Explore Products</a>
+<section class="about">
+  <h2 class="section-title">About Us</h2>
+
+  <p>
+    Radha Vann started from a very personal place. Like every parent, we think deeply about what goes into our child’s body.
+    Food is not just about taste but about health, growth, and responsibility.
+  </p>
+
+  <p>
+    If it’s not good enough for our child, it doesn’t go out.
+  </p>
+
+  <p>
+    We grow everything ourselves — no shortcuts, no compromises.
+    What reaches your home is the same food that reaches ours.
+  </p>
+</section>
+
+<section>
+  <h2 class="section-title">Our Produce</h2>
+
+  <div class="produce-grid">
+
+    <div class="card">
+      <img src="images/soyabean.jpg" alt="Soyabean">
+      <div class="card-content">
+        <h3>Grains & Pulses</h3>
+        <p>Tur Dal, Channa, Wheat, Soyabean, Corn.</p>
+      </div>
     </div>
-</section>
 
-<section id="about" class="section fade-in">
-    <h2>About Us</h2>
-    <p>Radha Vann is a premium Indian farm lifestyle brand rooted in purity, tradition, and honest farming values. 
-    We grow what our family eats – so you receive nothing but the best.</p>
-</section>
-
-<section id="gallery" class="section fade-in">
-    <h2>Farm Gallery</h2>
-    <div class="slider">
-        <img src="images/farm1.jpg" class="slide active">
-        <img src="images/farm2.jpg" class="slide">
+    <div class="card">
+      <img src="images/Corn field.jpg" alt="Corn Field">
+      <div class="card-content">
+        <h3>Farm Grains</h3>
+        <p>Seasonally cultivated crops grown responsibly.</p>
+      </div>
     </div>
+
+    <div class="card">
+      <img src="images/Bore.jpg" alt="Bore">
+      <div class="card-content">
+        <h3>Fruits</h3>
+        <p>Mangoes, Bore, Jackfruit, Tamarind.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/Mirchi.jpg" alt="Mirchi">
+      <div class="card-content">
+        <h3>Vegetables</h3>
+        <p>Fresh farm vegetables grown with care.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/Chikoo.jpg" alt="Chikoo">
+      <div class="card-content">
+        <h3>Seasonal Produce</h3>
+        <p>Clean, natural and responsibly grown food.</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<section id="contact" class="section fade-in">
-    <h2>Contact Us</h2>
-    <p>Email: vishalfasttrack@gmail.com</p>
-    <p>WhatsApp: 7299629196</p>
-</section>
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:vishalfasttrack@gmail.com">vishalfasttrack@gmail.com</a></p>
+  <p>WhatsApp: <a href="https://wa.me/917299629196" target="_blank">7299629196</a></p>
 
-<a href="https://wa.me/917299629196" class="whatsapp-float" target="_blank">💬</a>
+  <a class="whatsapp-btn" href="https://wa.me/917299629196" target="_blank">
+    Chat on WhatsApp
+  </a>
+</section>
 
 <footer>
-    <p>© 2026 Radha Vann | Premium Farm Lifestyle</p>
+  © 2026 Radha Vann • Grown with Care • Shared with Honesty
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
-
