@@ -3,283 +3,156 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Radha Vann | Pure Farm Produce & Honey</title>
+<title>Radha Vann | Premium Farm Lifestyle</title>
 
 <style>
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f9f8f4;
-  color: #333;
-  scroll-behavior: smooth;
+  font-family: 'Georgia', serif;
+  background-color: #f6f3ea;
+  color: #2e2e2e;
+}
+
+header {
+  background: #3e4a3f;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 48px;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin-top: 15px;
+  font-size: 20px;
+  font-style: italic;
 }
 
 section {
-  padding: 80px 20px;
-}
-
-.container {
+  padding: 70px 20px;
   max-width: 1100px;
   margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 40px;
+  color: #3e4a3f;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.9;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-h1, h2 {
-  color: #2e4d2e;
-}
-
-p {
-  line-height: 1.8;
-  font-size: 18px;
-}
-
-/* HERO */
-.hero {
-  background: linear-gradient(to right, #2e4d2e, #4f7c4f);
-  color: white;
-  padding: 100px 20px;
-}
-
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 20px;
-  opacity: 0.9;
-}
-
-/* ABOUT */
-.about {
-  background: #ffffff;
-}
-
-.honey-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.honey-list li {
-  font-size: 20px;
-  margin: 10px 0;
-  color: #8b5e00;
-  font-weight: 600;
-}
-
-/* PRODUCTS */
-.products {
-  background: #f1efe9;
-}
-
-.product-grid {
+.categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  margin-top: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
 }
 
-.product-card {
+.card {
   background: white;
-  padding: 30px;
+  padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  text-align: center;
+  transition: 0.3s ease;
 }
 
-.product-card:hover {
+.card:hover {
   transform: translateY(-8px);
 }
 
-.product-card h3 {
-  margin-bottom: 10px;
-  color: #2e4d2e;
-}
-
-.price {
-  font-size: 22px;
-  font-weight: bold;
-  color: #8b5e00;
-  margin: 15px 0;
-}
-
-button {
-  padding: 10px 20px;
-  border: none;
-  background: #2e4d2e;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: #1f351f;
-}
-
-/* WHOLESALE FORM */
-.wholesale {
-  background: white;
-}
-
-form {
-  max-width: 600px;
-  margin: 40px auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-input, textarea {
-  padding: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 100px;
+.card h3 {
+  margin-bottom: 15px;
+  color: #5a6b4f;
 }
 
 footer {
-  background: #2e4d2e;
+  background: #3e4a3f;
   color: white;
-  padding: 20px;
   text-align: center;
+  padding: 25px;
   font-size: 14px;
-}
-
-/* SIMPLE FADE ANIMATION */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
 }
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container fade-in">
-    <h1>Radha Vann</h1>
-    <p>Simple. Clean. Honest food grown with love.</p>
-  </div>
-</section>
+<header>
+  <h1>Radha Vann</h1>
+  <p>Premium Farm Lifestyle • Rooted in Indian Values</p>
+</header>
 
-<!-- ABOUT -->
 <section class="about">
-  <div class="container fade-in">
-    <h2>About Us</h2>
+  <h2>Our Story</h2>
 
-    <p>
-      Radha Vann started from a very personal place. Like every parent, we think deeply about what goes into our child’s body.
-      Food is not just about taste — it is about health, growth, and care.
-    </p>
+  <p>
+    Radha Vann started from a very personal place. Like every parent, we think deeply about what goes into our child’s body.
+    Food is not just about taste — it is about health, growth, and care.
+  </p>
 
-    <p>
-      One simple question stayed with us:
-      <strong>If we are so careful about what we feed our own child, why shouldn’t the same care go into the food we grow for others?</strong>
-      That thought became Radha Vann.
-    </p>
+  <p>
+    If we are so careful about what we feed our own child, why shouldn’t the same care go into the food we grow for others?
+    That thought became Radha Vann.
+  </p>
 
-    <p>
-      We grow our food ourselves with no shortcuts and no compromises. Everything is nurtured with patience and responsibility.
-    </p>
+  <p>
+    We grow our food ourselves so there are no shortcuts and no compromises. We know the soil, the seasons, and how each crop is nurtured.
+    Farming for us is not business first — it is responsibility.
+  </p>
 
-    <p><strong>Our Special Honey Varieties:</strong></p>
-
-    <ul class="honey-list">
-      <li>🍯 Jamun Honey</li>
-      <li>🍯 Bore Honey</li>
-      <li>🍯 Neem Honey</li>
-    </ul>
-
-    <p>
-      Each variety carries its own natural flavor and health benefits — harvested carefully and handled with honesty.
-    </p>
-
-    <p>
-      If it’s not good enough for our child, it doesn’t go out.
-    </p>
-  </div>
+  <p>
+    If it’s not good enough for our child, it doesn’t go out.
+  </p>
 </section>
 
-<!-- PRODUCTS -->
-<section class="products">
-  <div class="container fade-in">
-    <h2>Our Honey Collection</h2>
+<section>
+  <h2>What We Grow</h2>
 
-    <div class="product-grid">
+  <div class="categories">
 
-      <div class="product-card">
-        <h3>Jamun Honey</h3>
-        <p>Rich, dark honey known for its unique taste and health benefits.</p>
-        <div class="price">₹850 / 500g</div>
-        <button>Enquire Now</button>
-      </div>
-
-      <div class="product-card">
-        <h3>Bore Honey</h3>
-        <p>Light golden honey with a smooth, natural sweetness.</p>
-        <div class="price">₹750 / 500g</div>
-        <button>Enquire Now</button>
-      </div>
-
-      <div class="product-card">
-        <h3>Neem Honey</h3>
-        <p>Strong, medicinal honey valued for immunity support.</p>
-        <div class="price">₹900 / 500g</div>
-        <button>Enquire Now</button>
-      </div>
-
+    <div class="card">
+      <h3>Grains & Pulses</h3>
+      <p>Tur Dal, Bengal Gram (Channa), Whole Wheat, Soybean, Corn</p>
     </div>
-  </div>
-</section>
 
-<!-- WHOLESALE -->
-<section class="wholesale">
-  <div class="container fade-in">
-    <h2>Wholesale Enquiry</h2>
-    <p>Interested in bulk orders? Fill the form below and we will connect with you.</p>
+    <div class="card">
+      <h3>Fresh Vegetables</h3>
+      <p>Seasonal vegetables grown responsibly and naturally</p>
+    </div>
 
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <input type="text" placeholder="Business Name">
-      <textarea placeholder="Quantity Requirement & Details"></textarea>
-      <button type="submit">Submit Enquiry</button>
-    </form>
+    <div class="card">
+      <h3>Fruits</h3>
+      <p>Mangoes, Jujubes (Bore), Jackfruit, Tamarind</p>
+    </div>
+
+    <div class="card">
+      <h3>Natural Honey</h3>
+      <p>Jamun Honey, Bore Honey, Neem Honey</p>
+    </div>
+
+    <div class="card">
+      <h3>Farm Fish</h3>
+      <p>Responsibly cultivated fresh farm fish</p>
+    </div>
+
   </div>
 </section>
 
 <footer>
-  © 2026 Radha Vann. Grown with care. Shared with love.
+  © 2026 Radha Vann • Grown with Care • Shared with Honesty
 </footer>
-
-<script>
-const faders = document.querySelectorAll('.fade-in');
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
-  });
-});
-
-faders.forEach(fade => {
-  observer.observe(fade);
-});
-</script>
 
 </body>
 </html>
