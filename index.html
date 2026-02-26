@@ -7,6 +7,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
+<!-- WhatsApp Icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body{
     margin:0;
@@ -51,7 +54,7 @@ nav a:hover{
 
 .hero{
     height:100vh;
-    background:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1600&q=80&auto=format&fit=crop') center/cover no-repeat;
+    background:url('images/farm-banner.jpg') center/cover no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -77,26 +80,6 @@ section h2{
     text-align:center;
     font-size:38px;
     margin-bottom:60px;
-    color:#1b5e20;
-}
-
-/* ABOUT */
-#about{
-    background:#fff;
-    text-align:center;
-}
-
-#about p{
-    max-width:850px;
-    margin:auto;
-    line-height:1.9;
-    margin-bottom:25px;
-    font-size:17px;
-}
-
-.about-highlight{
-    font-weight:600;
-    font-size:20px;
     color:#1b5e20;
 }
 
@@ -131,12 +114,6 @@ section h2{
     color:#1b5e20;
 }
 
-.card p{
-    padding:0 20px 25px;
-    font-size:14px;
-    line-height:1.6;
-}
-
 .category-title{
     text-align:center;
     color:#2e7d32;
@@ -167,16 +144,27 @@ footer{
     padding:35px 20px;
 }
 
+/* WhatsApp Floating Button */
 .whatsapp{
     position:fixed;
     bottom:25px;
     right:25px;
     background:#25D366;
     color:white;
-    padding:18px 22px;
+    width:60px;
+    height:60px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     border-radius:50%;
-    font-size:20px;
+    font-size:28px;
     text-decoration:none;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.whatsapp:hover{
+    transform:scale(1.1);
 }
 </style>
 </head>
@@ -200,70 +188,40 @@ footer{
 </div>
 </div>
 
-<section id="about">
-<h2>About Radha Vann</h2>
-<p>One simple question stayed with us: If we are so careful about what we feed our own child, why shouldn’t the same care go into the food we grow for others? That thought became Radha Vann.</p>
-
-<p>We grow our food ourselves so there is no guessing, no shortcuts, and no compromises. We know the soil, the water, and how each crop is nurtured because we are involved at every step. Everything is grown with patience and responsibility, just the way we would grow food for our own family.</p>
-
-<p>For us, farming is not a business first; it is a responsibility. The produce that leaves Radha Vann is the same food we bring into our own kitchen. If it’s not good enough for our child, it doesn’t go out.</p>
-
-<p class="about-highlight">Radha Vann is our way of sharing that care and honesty with you — simple, clean food grown with love, the way it should be.</p>
-</section>
-
 <section id="products">
 <h2>Our Produce</h2>
 
 <div class="category-title">Grains & Pulses</div>
 <div class="products">
-<div class="card">
-<img src="https://images.unsplash.com/photo-1625944238615-2c9f5f9c3e5c?w=800&q=80&auto=format&fit=crop">
-<h3>Toor Dal (Tur Dal)</h3>
-<p>Premium Indian pigeon pea.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1604908176766-73db64b13e8e?w=800&q=80&auto=format&fit=crop">
-<h3>Whole Wheat</h3>
-<p>Nutrient-rich whole wheat.</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1606925797300-0f1e0a6a2b59?w=800&q=80&auto=format&fit=crop">
-<h3>Whole Bengal Gram</h3>
-<p>Premium whole bengal gram (chana).</p>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1617196038435-6f8e7b77a2e5?w=800&q=80&auto=format&fit=crop">
-<h3>Bengal Gram Dal</h3>
-<p>Split chana dal variety.</p>
-</div>
+<div class="card"><img src="images/toor-dal.jpg"><h3>Toor Dal (Tur Dal)</h3></div>
+<div class="card"><img src="images/wheat.jpg"><h3>Whole Wheat</h3></div>
+<div class="card"><img src="images/chana.jpg"><h3>Whole Bengal Gram</h3></div>
+<div class="card"><img src="images/chana-dal.jpg"><h3>Bengal Gram Dal</h3></div>
 </div>
 
 <div class="category-title">Vegetables</div>
 <div class="products">
-<div class="card"><img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=800&q=80&auto=format&fit=crop"><h3>Tomatoes</h3></div>
-<div class="card"> <img src="images/cabbage.jpg" alt="Cabbage"><h3>Cabbage</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=800&q=80&auto=format&fit=crop"><h3>Cauliflower</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1603048297172-c92544798d5a?w=800&q=80&auto=format&fit=crop"><h3>Lady Finger (Okra)</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1601004890684-d8cbf643f5f2?w=800&q=80&auto=format&fit=crop"><h3>Coriander</h3></div>
+<div class="card"><img src="images/tomato.jpg"><h3>Tomatoes</h3></div>
+<div class="card"><img src="images/cabbage.jpg"><h3>Cabbage</h3></div>
+<div class="card"><img src="images/cauliflower.jpg"><h3>Cauliflower</h3></div>
+<div class="card"><img src="images/okra.jpg"><h3>Lady Finger (Okra)</h3></div>
+<div class="card"><img src="images/coriander.jpg"><h3>Coriander</h3></div>
 </div>
 
 <div class="category-title">Fruits (Seasonal)</div>
 <div class="products">
-<div class="card"><img src="https://images.unsplash.com/photo-1604908176997-431b3a6c14a8?w=800&q=80&auto=format&fit=crop"><h3>Jackfruit</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1553279768-865429fa0078?w=800&q=80&auto=format&fit=crop"><h3>Mangoes</h3></div>
-<div class="card"> <img src="images/cabbage.jpg" alt="Cabbage"><h3>Chinch</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1603048719537-1a6f3b2a644d?w=800&q=80&auto=format&fit=crop"><h3>Indian Jujubes</h3></div>
+<div class="card"><img src="images/jackfruit.jpg"><h3>Jackfruit</h3></div>
+<div class="card"><img src="images/mango.jpg"><h3>Mangoes</h3></div>
+<div class="card"><img src="images/tamarind.jpg"><h3>Chinch (Tamarind)</h3></div>
+<div class="card"><img src="images/jujube.jpg"><h3>Indian Jujubes</h3></div>
 </div>
 
 <div class="category-title">Special Produce</div>
 <div class="products">
-<div class="card"><img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=800&q=80&auto=format&fit=crop"><h3>Tamarind Honey</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=800&q=80&auto=format&fit=crop"><h3>Neem Honey</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?w=800&q=80&auto=format&fit=crop"><h3>Jujube Honey</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1572441710534-68067b38b3f2?w=800&q=80&auto=format&fit=crop"><h3>Fresh Farm Fish</h3></div>
+<div class="card"><img src="images/tamarind-honey.jpg"><h3>Tamarind Honey</h3></div>
+<div class="card"><img src="images/neem-honey.jpg"><h3>Neem Honey</h3></div>
+<div class="card"><img src="images/jujube-honey.jpg"><h3>Jujube Honey</h3></div>
+<div class="card"><img src="images/farm-fish.jpg"><h3>Fresh Farm Fish</h3></div>
 </div>
 
 </section>
@@ -284,9 +242,10 @@ footer{
 © 2026 Radha Vann | Premium Farm Produce
 </footer>
 
-<a href="https://wa.me/917299629196" class="whatsapp" target="_blank">W</a>
+<!-- WhatsApp Button -->
+<a href="https://wa.me/917299629196" class="whatsapp" target="_blank">
+<i class="fab fa-whatsapp"></i>
+</a>
 
 </body>
 </html>
-
-
