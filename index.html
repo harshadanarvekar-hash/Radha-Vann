@@ -5,66 +5,83 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Radha Vann | Premium Farm Lifestyle</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 body {
   margin: 0;
-  font-family: 'Georgia', serif;
-  background-color: #f6f3ea;
-  color: #2e2e2e;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f1e8;
+  color: #333;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
 }
 
 header {
-  background: #3e4a3f;
-  color: white;
-  padding: 60px 20px;
+  background: url('images/Farm Banner.jpg') center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  color: white;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
 }
 
 header h1 {
-  font-size: 48px;
-  margin: 0;
-  letter-spacing: 2px;
+  font-size: 60px;
+  letter-spacing: 3px;
 }
 
 header p {
+  font-size: 22px;
   margin-top: 15px;
-  font-size: 20px;
-  font-style: italic;
 }
 
 section {
-  padding: 70px 20px;
-  max-width: 1100px;
+  padding: 80px 20px;
+  max-width: 1200px;
   margin: auto;
 }
 
-h2 {
+.section-title {
   text-align: center;
-  font-size: 34px;
-  margin-bottom: 40px;
-  color: #3e4a3f;
+  font-size: 36px;
+  margin-bottom: 50px;
+  color: #2f4f2f;
 }
 
 .about p {
   font-size: 18px;
   line-height: 1.9;
   margin-bottom: 20px;
-  text-align: center;
 }
 
-.categories {
+.produce-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
 }
 
 .card {
   background: white;
-  padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  text-align: center;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   transition: 0.3s ease;
 }
 
@@ -72,16 +89,50 @@ h2 {
   transform: translateY(-8px);
 }
 
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
 .card h3 {
-  margin-bottom: 15px;
-  color: #5a6b4f;
+  margin-bottom: 10px;
+  color: #3e5c3e;
+}
+
+.contact {
+  background: #2f4f2f;
+  color: white;
+  text-align: center;
+  padding: 70px 20px;
+}
+
+.contact a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #25D366;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
 }
 
 footer {
-  background: #3e4a3f;
-  color: white;
   text-align: center;
-  padding: 25px;
+  padding: 20px;
+  background: #1f331f;
+  color: white;
   font-size: 14px;
 }
 </style>
@@ -90,64 +141,86 @@ footer {
 <body>
 
 <header>
-  <h1>Radha Vann</h1>
-  <p>Premium Farm Lifestyle • Rooted in Indian Values</p>
+  <div class="header-content">
+    <h1>Radha Vann</h1>
+    <p>Premium Farm Lifestyle • Rooted in Indian Values</p>
+  </div>
 </header>
 
 <section class="about">
-  <h2>Our Story</h2>
+  <h2 class="section-title">About Us</h2>
 
   <p>
     Radha Vann started from a very personal place. Like every parent, we think deeply about what goes into our child’s body.
-    Food is not just about taste — it is about health, growth, and care.
-  </p>
-
-  <p>
-    If we are so careful about what we feed our own child, why shouldn’t the same care go into the food we grow for others?
-    That thought became Radha Vann.
-  </p>
-
-  <p>
-    We grow our food ourselves so there are no shortcuts and no compromises. We know the soil, the seasons, and how each crop is nurtured.
-    Farming for us is not business first — it is responsibility.
+    Food is not just about taste but about health, growth, and responsibility.
   </p>
 
   <p>
     If it’s not good enough for our child, it doesn’t go out.
   </p>
+
+  <p>
+    We grow everything ourselves — no shortcuts, no compromises.
+    What reaches your home is the same food that reaches ours.
+  </p>
 </section>
 
 <section>
-  <h2>What We Grow</h2>
+  <h2 class="section-title">Our Produce</h2>
 
-  <div class="categories">
+  <div class="produce-grid">
 
     <div class="card">
-      <h3>Grains & Pulses</h3>
-      <p>Tur Dal, Bengal Gram (Channa), Whole Wheat, Soybean, Corn</p>
+      <img src="images/soyabean.jpg" alt="Soyabean">
+      <div class="card-content">
+        <h3>Grains & Pulses</h3>
+        <p>Tur Dal, Channa, Wheat, Soyabean, Corn.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Fresh Vegetables</h3>
-      <p>Seasonal vegetables grown responsibly and naturally</p>
+      <img src="images/Corn field.jpg" alt="Corn Field">
+      <div class="card-content">
+        <h3>Farm Grains</h3>
+        <p>Seasonally cultivated crops grown responsibly.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Fruits</h3>
-      <p>Mangoes, Jujubes (Bore), Jackfruit, Tamarind</p>
+      <img src="images/Bore.jpg" alt="Bore">
+      <div class="card-content">
+        <h3>Fruits</h3>
+        <p>Mangoes, Bore, Jackfruit, Tamarind.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Natural Honey</h3>
-      <p>Jamun Honey, Bore Honey, Neem Honey</p>
+      <img src="images/Mirchi.jpg" alt="Mirchi">
+      <div class="card-content">
+        <h3>Vegetables</h3>
+        <p>Fresh farm vegetables grown with care.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Farm Fish</h3>
-      <p>Responsibly cultivated fresh farm fish</p>
+      <img src="images/Chikoo.jpg" alt="Chikoo">
+      <div class="card-content">
+        <h3>Seasonal Produce</h3>
+        <p>Clean, natural and responsibly grown food.</p>
+      </div>
     </div>
 
   </div>
+</section>
+
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: <a href="mailto:vishalfasttrack@gmail.com">vishalfasttrack@gmail.com</a></p>
+  <p>WhatsApp: <a href="https://wa.me/917299629196" target="_blank">7299629196</a></p>
+
+  <a class="whatsapp-btn" href="https://wa.me/917299629196" target="_blank">
+    Chat on WhatsApp
+  </a>
 </section>
 
 <footer>
